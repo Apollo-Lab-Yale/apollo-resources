@@ -1,0 +1,12 @@
+link_mesh_relative_paths:
+- mesh_modules/original_meshes_module/meshes/base.dae
+- mesh_modules/original_meshes_module/meshes/shoulder.dae
+- mesh_modules/original_meshes_module/meshes/upperarm.dae
+- mesh_modules/original_meshes_module/meshes/forearm.dae
+- mesh_modules/original_meshes_module/meshes/wrist1.dae
+- mesh_modules/original_meshes_module/meshes/wrist2.dae
+- mesh_modules/original_meshes_module/meshes/wrist3.dae
+- null
+- null
+- null
+- null
