@@ -1,0 +1,15 @@
+link_mesh_relative_paths:
+- mesh_modules/convex_hull_meshes_module/meshes/link0.stl
+- mesh_modules/convex_hull_meshes_module/meshes/link1.stl
+- mesh_modules/convex_hull_meshes_module/meshes/link2.stl
+- mesh_modules/convex_hull_meshes_module/meshes/link3.stl
+- mesh_modules/convex_hull_meshes_module/meshes/link4.stl
+- mesh_modules/convex_hull_meshes_module/meshes/link5.stl
+- mesh_modules/convex_hull_meshes_module/meshes/link6.stl
+- mesh_modules/convex_hull_meshes_module/meshes/link7.stl
+- null
+- mesh_modules/convex_hull_meshes_module/meshes/hand.stl
+- mesh_modules/convex_hull_meshes_module/meshes/finger.stl
+- mesh_modules/convex_hull_meshes_module/meshes/finger.stl
+- null
+- null
