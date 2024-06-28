@@ -1,0 +1,19 @@
+num_dofs: 6
+dof_idx_to_joint_mapping_idx:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+joint_idx_to_dofs_mapping:
+- - 0
+- - 1
+- - 2
+- - 3
+- - 4
+- - 5
+- []
+- []
+- []
+- []
