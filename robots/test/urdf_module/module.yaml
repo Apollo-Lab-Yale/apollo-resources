@@ -1251,14 +1251,14 @@ joints:
   origin:
     xyz:
     - 1.0
-    - 2.0
-    - 3.0
+    - 0.0
+    - 0.0
     rpy:
-    - 3.0
-    - 2.0
-    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
   parent:
-    link: robot_0_ee_link
+    link: combined_robot_world
   child:
     link: robot_1_world
   axis:

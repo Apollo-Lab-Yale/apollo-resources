@@ -5,8 +5,10 @@ links_in_chain:
   parent_link_idx: null
   children_joint_idxs:
   - 0
+  - 11
   children_link_idxs:
   - 11
+  - 12
 - name: robot_0_base_link
   link_idx: 1
   parent_joint_idx: 10
@@ -71,10 +73,8 @@ links_in_chain:
   link_idx: 8
   parent_joint_idx: 7
   parent_link_idx: 7
-  children_joint_idxs:
-  - 11
-  children_link_idxs:
-  - 12
+  children_joint_idxs: []
+  children_link_idxs: []
 - name: robot_0_base
   link_idx: 9
   parent_joint_idx: 8
@@ -98,7 +98,7 @@ links_in_chain:
 - name: robot_1_world
   link_idx: 12
   parent_joint_idx: 11
-  parent_link_idx: 8
+  parent_link_idx: 0
   children_joint_idxs:
   - 12
   children_link_idxs:
@@ -242,8 +242,8 @@ joints_in_chain:
   child_link_idx: 1
 - joint_name: connection_joint_robot_1
   joint_idx: 11
-  parent_link_name: robot_0_ee_link
-  parent_link_idx: 8
+  parent_link_name: combined_robot_world
+  parent_link_idx: 0
   child_link_name: robot_1_world
   child_link_idx: 12
 - joint_name: robot_1_world_joint
@@ -303,24 +303,24 @@ joints_in_chain:
 kinematic_hierarchy:
 - - 0
 - - 11
+  - 12
 - - 1
+  - 13
 - - 2
   - 9
+  - 14
 - - 3
+  - 15
 - - 4
+  - 16
 - - 5
+  - 17
 - - 6
+  - 18
 - - 7
+  - 19
 - - 8
   - 10
-- - 12
-- - 13
-- - 14
-- - 15
-- - 16
-- - 17
-- - 18
-- - 19
-- - 20
+  - 20
 - - 21
 root_idx: 0
