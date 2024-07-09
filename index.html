@@ -85,40 +85,40 @@
     import {ThreeEngine} from 'three_engine/utils/utils_three.js';
     import {RobotFKSlidersVisualizer} from 'three_engine/utils/utils_kinematics.js';
     import {RobotFromPreprocessor} from 'three_engine/utils/utils_robot.js';
-    // import {visualize_robot} from 'three_engine/utils/utils_robots_visualization.js';
+    import {visualize_robot} from 'three_engine/utils/utils_robots_visualization.js';
 
     let engine = ThreeEngine.new_default_3d();
     const robots_dir = './robots';
 
-    async function visualize_robot(engine, robots_dir, robot_name) {
-        const robot_dir = `${robots_dir}/${robot_name}`;
-        const [chainConfig, urdfConfig, meshConfig_stl, meshConfig, meshConfig_hull, meshConfig_convex_decomposition] = await Promise.all([
-            fetch(`${robot_dir}/chain_module/module.json`).then(response => response.json()),
-            fetch(`${robot_dir}/urdf_module/module.json`).then(response => response.json()),
-            fetch(`${robot_dir}/mesh_modules/plain_meshes_module/module.json`).then(response => response.json()),
-            fetch(`${robot_dir}/mesh_modules/original_meshes_module/module.json`).then(response => response.json()),
-            fetch(`${robot_dir}/mesh_modules/convex_hull_meshes_module/module.json`).then(response => response.json()),
-            fetch(`${robot_dir}/mesh_modules/convex_decomposition_meshes_module/module.json`).then(response => response.json())
-        ]);
-
-        let robot = new RobotFromPreprocessor(
-            chainConfig,
-            urdfConfig,
-            meshConfig,
-            meshConfig_stl,
-            'stl',
-            meshConfig_hull,
-            meshConfig_convex_decomposition,
-            `apollo-robots-dir/${robots_dir}`
-        );
-
-        robot.spawn_robot(engine);
-
-        let visualizer = new RobotFKSlidersVisualizer(robot);
-        engine.animation_loop(function() {
-            visualizer.three_loop_function(engine);
-        });
-    }
+    // async function visualize_robot(engine, robots_dir, robot_name) {
+    //     const robot_dir = `${robots_dir}/${robot_name}`;
+    //     const [chainConfig, urdfConfig, meshConfig_stl, meshConfig, meshConfig_hull, meshConfig_convex_decomposition] = await Promise.all([
+    //         fetch(`${robot_dir}/chain_module/module.json`).then(response => response.json()),
+    //         fetch(`${robot_dir}/urdf_module/module.json`).then(response => response.json()),
+    //         fetch(`${robot_dir}/mesh_modules/plain_meshes_module/module.json`).then(response => response.json()),
+    //         fetch(`${robot_dir}/mesh_modules/original_meshes_module/module.json`).then(response => response.json()),
+    //         fetch(`${robot_dir}/mesh_modules/convex_hull_meshes_module/module.json`).then(response => response.json()),
+    //         fetch(`${robot_dir}/mesh_modules/convex_decomposition_meshes_module/module.json`).then(response => response.json())
+    //     ]);
+    //
+    //     let robot = new RobotFromPreprocessor(
+    //         chainConfig,
+    //         urdfConfig,
+    //         meshConfig,
+    //         meshConfig_stl,
+    //         'stl',
+    //         meshConfig_hull,
+    //         meshConfig_convex_decomposition,
+    //         `apollo-robots-dir/${robots_dir}`
+    //     );
+    //
+    //     robot.spawn_robot(engine);
+    //
+    //     let visualizer = new RobotFKSlidersVisualizer(robot);
+    //     engine.animation_loop(function() {
+    //         visualizer.three_loop_function(engine);
+    //     });
+    // }
 
     document.getElementById('load-robot').addEventListener('click', () => {
         const robot_name = document.getElementById('robot-select').value;
@@ -126,15 +126,6 @@
         document.getElementById('visualization-container').style.display = 'block';
         visualize_robot(engine, robots_dir, robot_name);
     });
-    // engine.animation_loop(function() {
-    //     engine.draw_debug_vector([0,0], [1,1]);
-    //     engine.draw_debug_line([0,0], [1,1,0.5], undefined, 0.005, 0x888822);
-    //     engine.draw_debug_line([0,0], [1,1,-0.2], undefined, 0.005, 0x228888);
-    //     engine.draw_debug_line([1,1], [1,1,0.5], undefined, 0.005, 0x888822);
-    //     engine.draw_debug_line([1,1], [1,1,-0.2], undefined, 0.005, 0x228888);
-    //     engine.draw_debug_sphere([1,1,-0.2], 0.025, 0x228888);
-    //     engine.draw_debug_sphere([1,1,0.5], 0.025, 0x888822);
-    // });
 </script>
 </body>
 </html>
