@@ -1,42 +1,9 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <title>Apollo Robots Directory</title>-->
-<!--</head>-->
-<!--<body>-->
-<!--<script type="module">-->
-<!--    console.log('hello');-->
-
-<!--</script>-->
-<!--</body>-->
-<!--</html>-->
-
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<head>-->
-<!--    <meta charset="utf-8">-->
-<!--    <meta name="generator" content="GitLab Pages">-->
-<!--    <title>Plain HTML site using GitLab Pages</title>-->
-<!--</head>-->
-<!--<body>-->
-<!--Test-->
-<!--</body>-->
-<!--</html>-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>In Browser Test Visualization</title>
-    <style>
-        #visualization-container {
-            text-align: center;
-            display: none;
-        }
-        #menu-container {
-            text-align: center;
-        }
-    </style>
+    <title>In Browser Visualization</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lil-gui@0.19.1/dist/lil-gui.umd.min.js"></script>
@@ -55,6 +22,9 @@
     </script>
 </head>
 <body>
+<div id="image-container">
+    <img src="./assets/apollo-lab-logo.png" alt="Image 1">
+</div>
 <div id="menu-container">
     <h1>Select a Robot</h1>
     <label for="robot-select">Choose a robot:</label>
@@ -62,7 +32,16 @@
         <!-- Options will be populated dynamically -->
     </select>
     <button id="load-robot">Load Robot</button>
+    <div id="menu-instructions">
+        Instructions:
+        <ul>
+            <li>Select a robot from the dropdown menu.</li>
+            <li>Click the "Load Robot" button to visualize the selected robot.</li>
+            <li>Use the provided controls to interact with the robot and visualize various information.</li>
+        </ul>
+    </div>
 </div>
+
 <script>
     // Populate the dropdown options
     document.addEventListener('DOMContentLoaded', () => {
@@ -78,7 +57,6 @@
     });
 </script>
 <div id="visualization-container">
-    <h1>Robot Visualization</h1>
     <!-- Visualization content will go here -->
 </div>
 <script type="module">
