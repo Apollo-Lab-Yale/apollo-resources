@@ -89,11 +89,20 @@
     let engine = ThreeEngine.new_default_3d();
     const robots_dir = './apollo_robots_dir/robots';
 
-    document.getElementById('load-robot').addEventListener('click', () => {
-        const robot_name = document.getElementById('robot-select').value;
-        document.getElementById('menu-container').style.display = 'none';
-        document.getElementById('visualization-container').style.display = 'block';
-        visualize_robot(engine, robots_dir, robot_name);
+    // document.getElementById('load-robot').addEventListener('click', () => {
+    //     const robot_name = document.getElementById('robot-select').value;
+    //     document.getElementById('menu-container').style.display = 'none';
+    //     document.getElementById('visualization-container').style.display = 'block';
+    //     visualize_robot(engine, robots_dir, robot_name);
+    // });
+    engine.animation_loop(function() {
+        engine.draw_debug_vector([0,0], [1,1]);
+        engine.draw_debug_line([0,0], [1,1,0.5], undefined, 0.005, 0x888822);
+        engine.draw_debug_line([0,0], [1,1,-0.2], undefined, 0.005, 0x228888);
+        engine.draw_debug_line([1,1], [1,1,0.5], undefined, 0.005, 0x888822);
+        engine.draw_debug_line([1,1], [1,1,-0.2], undefined, 0.005, 0x228888);
+        engine.draw_debug_sphere([1,1,-0.2], 0.025, 0x228888);
+        engine.draw_debug_sphere([1,1,0.5], 0.025, 0x888822);
     });
 </script>
 </body>
