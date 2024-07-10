@@ -26,11 +26,6 @@ h1 {
     color: white;
 }
 
-label {
-    font-size: 18px;
-    color: white;
-}
-
 select {
     padding: 10px;
     font-size: 16px;
@@ -50,14 +45,21 @@ button:hover {
     background-color: #ccc;
 }
 
-/*#visualization-container {*/
-/*    text-align: center;*/
-/*    padding: 20px;*/
-/*    display: none;*/
-/*    background-color: white;*/
-/*    color: white;*/
-/*    border-top: 1px solid #ccc;*/
-/*}*/
+
+#visualization-container {
+    font-family: initial; /* Reset font to default */
+    font-size: initial; /* Reset font size to default */
+    color: initial; /* Reset font color to default */
+}
+
+#threejs-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: initial; /* Reset font to default */
+    font-size: initial; /* Reset font size to default */
+    color: initial; /* Reset font color to default */
+}
 
 #menu-instructions {
     text-align: left;
