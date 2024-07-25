@@ -151,6 +151,10 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
+- null
+- null
+- null
 decomposition_obbs:
 - - half_extents:
     - 0.005775300785899162

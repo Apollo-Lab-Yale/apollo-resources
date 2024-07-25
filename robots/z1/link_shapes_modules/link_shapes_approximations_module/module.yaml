@@ -85,6 +85,7 @@ full_obbs:
   - -0.0
   - 0.0
 full_bounding_spheres:
+- null
 - radius: 0.08590942766878144
   offset_xyz:
   - 0.017402447192419734

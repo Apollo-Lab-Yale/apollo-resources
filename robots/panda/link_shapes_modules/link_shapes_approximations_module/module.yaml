@@ -207,6 +207,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.11404532262814056
   offset_xyz:
   - 0.00003809297372972102
@@ -234,6 +235,8 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
+- null
 decomposition_obbs:
 - - half_extents:
     - 0.04175041429698467

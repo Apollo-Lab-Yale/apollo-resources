@@ -277,6 +277,7 @@ full_obbs:
   - -0.0
   - 0.0
 full_bounding_spheres:
+- null
 - radius: 0.30848425085849057
   offset_xyz:
   - -0.1651251130106504
@@ -286,6 +287,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.058396132593198445
   offset_xyz:
   - -0.008667801356836405
@@ -295,6 +297,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.18629567189594073
   offset_xyz:
   - -0.005622917530138683
@@ -304,6 +307,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.24156711518296123
   offset_xyz:
   - 0.0019584010043155083
@@ -313,6 +317,8 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
+- null
 - radius: 0.058396132593198445
   offset_xyz:
   - -0.008667801356836405
@@ -322,6 +328,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.1771923513338458
   offset_xyz:
   - -0.003871937783186471
@@ -331,6 +338,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.24156711518296123
   offset_xyz:
   - 0.0019584010043155083
@@ -340,6 +348,8 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
+- null
 - radius: 0.058396132593198445
   offset_xyz:
   - -0.008667801356836405
@@ -349,6 +359,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.18629567189594073
   offset_xyz:
   - -0.005622917530138683
@@ -358,6 +369,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.24156711518296123
   offset_xyz:
   - 0.0019584010043155083
@@ -367,6 +379,8 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
+- null
 - radius: 0.058396132593198445
   offset_xyz:
   - -0.008667801356836405
@@ -376,6 +390,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.1771923513338458
   offset_xyz:
   - -0.003871937783186471
@@ -385,6 +400,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.24156711518296123
   offset_xyz:
   - 0.0019584010043155083
@@ -394,6 +410,8 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
+- null
 - radius: 0.0288007313652092
   offset_xyz:
   - -6.208817239906992e-12
@@ -403,6 +421,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.0288007313652092
   offset_xyz:
   - -6.208817239906992e-12
@@ -412,6 +431,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.0288007313652092
   offset_xyz:
   - -6.208817239906992e-12
@@ -421,6 +441,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.0288007313652092
   offset_xyz:
   - -6.208817239906992e-12
@@ -430,6 +451,7 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
 - radius: 0.0288007313652092
   offset_xyz:
   - -6.208817239906992e-12
@@ -439,6 +461,9 @@ full_bounding_spheres:
   - 0.0
   - -0.0
   - 0.0
+- null
+- null
+- null
 - radius: 0.02803895174691335
   offset_xyz:
   - 0.00012931820576588863
