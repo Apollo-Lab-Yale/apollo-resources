@@ -31,13 +31,24 @@
     <select id="robot-select">
         <!-- Options will be populated dynamically -->
     </select>
-    <button id="load-robot">Load Robot</button>
+    <button id="load-robot">Load Robot and Environment</button>
     <div id="menu-instructions">
         Instructions:
         <ul>
             <li>Select a robot from the dropdown menu.</li>
             <li>Click the "Load Robot" button to visualize the selected robot.</li>
             <li>Use the provided controls to interact with the robot and visualize various information.</li>
+        </ul>
+    </div>
+    <h1>Select an Environment</h1>
+    <label for="environment-select">Choose an environment:</label>
+    <select id="environment-select">
+        <!-- Options will be populated dynamically -->
+    </select>
+    <div id="environment-menu-instructions">
+        Instructions:
+        <ul>
+            <li>Select an environment from the dropdown menu.</li>
         </ul>
     </div>
 </div>
@@ -49,11 +60,14 @@
     document.addEventListener('DOMContentLoaded', async () => {
         const user = 'Apollo-Lab-Yale'; // Replace with your GitHub username
         const repo = 'apollo-resources'; // Replace with your repository name
-        const path = 'robots'; // Path to the robots directory
-        const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${path}`;
+        const robot_path = 'robots'; // Path to the robots directory
+        const environment_path = 'environments'; // Path to the environments directory
+
+        const robot_apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${robot_path}`;
+        const environment_apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${environment_path}`;
 
         try {
-            const response = await fetch(apiUrl);
+            const response = await fetch(robot_apiUrl);
             const data = await response.json();
             const select = document.getElementById('robot-select');
 
@@ -67,6 +81,28 @@
             });
         } catch (error) {
             console.error('Error fetching robot data:', error);
+        }
+
+        try {
+            const response = await fetch(environment_apiUrl);
+            const data = await response.json();
+            const select = document.getElementById('environment-select');
+
+            const default_option = document.createElement('option');
+            default_option.value = 'empty environment';
+            default_option.textContent = 'empty environment';
+            select.appendChild(default_option);
+
+            data.forEach(file => {
+                if (file.type === 'dir') {
+                    const option = document.createElement('option');
+                    option.value = file.name.toLowerCase().replace(/\s+/g, '-');
+                    option.textContent = file.name;
+                    select.appendChild(option);
+                }
+            });
+        } catch (error) {
+            console.error('Error fetching environment data:', error);
         }
 
         // Return button functionality
@@ -87,8 +123,9 @@
 
     let engine = ThreeEngine.new_default_3d();
     const robots_dir = './robots';
+    const environments_dir = './environments';
 
-    async function visualize_robot(engine, robots_dir, robot_name) {
+    async function visualize_robot_and_env(engine, robots_dir, robot_name, environments_dir, environment_name) {
         const robot_dir = `${robots_dir}/${robot_name}`;
         const [chainConfig, urdfConfig, meshConfig_stl, meshConfig, meshConfig_hull, meshConfig_convex_decomposition, shapesConfig] = await Promise.all([
             fetch(`${robot_dir}/chain_module/module.json`).then(response => response.json()),
@@ -113,18 +150,60 @@
         );
 
         robot.spawn_robot(engine);
+        let robot_visualizer = new RobotFKSlidersVisualizer(robot);
+        robot_visualizer.gui.close();
+        robot_visualizer.gui.title('Robot Chain');
 
-        let visualizer = new RobotFKSlidersVisualizer(robot);
+
+        let environment_visualizer;
+
+        if(environment_name != 'empty environment') {
+            const environment_dir = `${environments_dir}/${environment_name}`;
+            const [env_chainConfig, env_urdfConfig, env_meshConfig_stl, env_meshConfig, env_meshConfig_hull, env_meshConfig_convex_decomposition, env_shapesConfig] = await Promise.all([
+                fetch(`${environment_dir}/chain_module/module.json`).then(response => response.json()),
+                fetch(`${environment_dir}/urdf_module/module.json`).then(response => response.json()),
+                fetch(`${environment_dir}/mesh_modules/plain_meshes_module/module.json`).then(response => response.json()),
+                fetch(`${environment_dir}/mesh_modules/original_meshes_module/module.json`).then(response => response.json()),
+                fetch(`${environment_dir}/mesh_modules/convex_hull_meshes_module/module.json`).then(response => response.json()),
+                fetch(`${environment_dir}/mesh_modules/convex_decomposition_meshes_module/module.json`).then(response => response.json()),
+                fetch(`${environment_dir}/link_shapes_modules/link_shapes_approximations_module/module.json`).then(response => response.json()),
+            ]);
+
+            let environment = new RobotFromPreprocessor(
+                env_chainConfig,
+                env_urdfConfig,
+                env_meshConfig,
+                env_meshConfig_stl,
+                'stl',
+                env_meshConfig_hull,
+                env_meshConfig_convex_decomposition,
+                env_shapesConfig,
+                `apollo-resources/${environments_dir}`// robots_dir
+            );
+
+            environment.spawn_robot(engine);
+            environment_visualizer = new RobotFKSlidersVisualizer(environment);
+            environment_visualizer.gui.close()
+            environment_visualizer.gui.title('Environment Chain');
+
+            // Access the DOM element of the GUI
+            const guiContainer = environment_visualizer.gui.domElement;
+            //guiContainer.style.position = 'absolute';
+            guiContainer.style.left = '260px';
+        }
+
         engine.animation_loop(function() {
-            visualizer.three_loop_function(engine);
+            robot_visualizer.three_loop_function(engine);
+            if(environment_name != 'empty environment') { environment_visualizer.three_loop_function(engine); }
         });
     }
 
     document.getElementById('load-robot').addEventListener('click', () => {
         const robot_name = document.getElementById('robot-select').value;
+        const environment_name = document.getElementById('environment-select').value;
         document.getElementById('menu-container').style.display = 'none';
         document.getElementById('visualization-container').style.display = 'block';
-        visualize_robot(engine, robots_dir, robot_name);
+        visualize_robot_and_env(engine, robots_dir, robot_name, environments_dir, environment_name);
     });
 </script>
 </body>
