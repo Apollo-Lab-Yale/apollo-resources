@@ -1,4 +1,5 @@
 stl_link_mesh_relative_paths:
+- []
 - - test/mesh_modules/convex_decomposition_meshes_module/meshes/stl/untitled/0.stl
   - test/mesh_modules/convex_decomposition_meshes_module/meshes/stl/untitled/1.stl
   - test/mesh_modules/convex_decomposition_meshes_module/meshes/stl/untitled/2.stl
@@ -16,6 +17,7 @@ stl_link_mesh_relative_paths:
   - test/mesh_modules/convex_decomposition_meshes_module/meshes/stl/untitled/14.stl
   - test/mesh_modules/convex_decomposition_meshes_module/meshes/stl/untitled/15.stl
 obj_link_mesh_relative_paths:
+- []
 - - test/mesh_modules/convex_decomposition_meshes_module/meshes/obj/untitled/0.obj
   - test/mesh_modules/convex_decomposition_meshes_module/meshes/obj/untitled/1.obj
   - test/mesh_modules/convex_decomposition_meshes_module/meshes/obj/untitled/2.obj
@@ -33,6 +35,7 @@ obj_link_mesh_relative_paths:
   - test/mesh_modules/convex_decomposition_meshes_module/meshes/obj/untitled/14.obj
   - test/mesh_modules/convex_decomposition_meshes_module/meshes/obj/untitled/15.obj
 glb_link_mesh_relative_paths:
+- []
 - - test/mesh_modules/convex_decomposition_meshes_module/meshes/glb/untitled/0.glb
   - test/mesh_modules/convex_decomposition_meshes_module/meshes/glb/untitled/1.glb
   - test/mesh_modules/convex_decomposition_meshes_module/meshes/glb/untitled/2.glb

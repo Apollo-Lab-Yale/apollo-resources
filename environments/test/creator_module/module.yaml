@@ -1,6 +1,6 @@
 name: test
 actions:
-- !AddSingleObjectFromStlFile
+- !AddSingleLinkFromStlFile
   fp: /Users/dannyrakita/Desktop/untitled.stl
   object_name: tester
   parent_object: null

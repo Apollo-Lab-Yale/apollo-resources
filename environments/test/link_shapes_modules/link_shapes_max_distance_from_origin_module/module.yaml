@@ -1,10 +1,14 @@
 full_convex_hulls_maximum_distances:
+- null
 - 1.7320508075688772
 full_obbs_maximum_distances:
+- null
 - 1.7320508075688772
 full_bounding_spheres_maximum_distances:
+- null
 - 1.7320508075688776
 decomposition_convex_hulls_maximum_distances:
+- []
 - - 1.745688996400867
   - 1.701443424482666
   - 1.701443424482666
@@ -22,6 +26,7 @@ decomposition_convex_hulls_maximum_distances:
   - 1.6750753989769505
   - 1.745688996400867
 decomposition_obbs_maximum_distances:
+- []
 - - 1.745688996400867
   - 1.701443424482666
   - 1.701443424482666
@@ -39,6 +44,7 @@ decomposition_obbs_maximum_distances:
   - 1.6844505454988647
   - 1.745688996400867
 decomposition_bounding_spheres_maximum_distances:
+- []
 - - 2.4650534643381183
   - 2.227804211733034
   - 2.349163335613109
