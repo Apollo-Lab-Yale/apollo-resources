@@ -8,7 +8,23 @@ decomposition_convex_hulls_simple_skips:
 - - true
   - true
   - true
-  - false
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+- - true
+  - true
+  - true
+  - true
   - true
   - true
   - true
@@ -45,54 +61,6 @@ decomposition_convex_hulls_simple_skips:
   - true
   - true
   - true
-  - false
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-- - false
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - false
-  - true
-  - false
-  - true
-  - true
-  - true
-  - true
-  - true
-- - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-- - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - false
   - true
   - true
   - true
@@ -122,28 +90,12 @@ decomposition_convex_hulls_simple_skips:
   - true
   - true
   - true
-  - false
   - true
   - true
   - true
   - true
   - true
   - true
-  - true
-  - true
-  - true
-  - true
-- - true
-  - true
-  - false
-  - false
-  - true
-  - true
-  - true
-  - true
-  - true
-  - true
-  - false
   - true
   - true
   - true
@@ -159,24 +111,8 @@ decomposition_convex_hulls_simple_skips:
   - true
   - true
   - true
-  - false
-  - false
   - true
   - true
-  - true
-  - true
-- - true
-  - true
-  - true
-  - false
-  - true
-  - true
-  - true
-  - true
-  - false
-  - false
-  - true
-  - false
   - true
   - true
   - true
@@ -190,8 +126,72 @@ decomposition_convex_hulls_simple_skips:
   - true
   - true
   - true
-  - false
-  - false
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+- - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+- - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+- - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+- - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
   - true
   - true
   - true
