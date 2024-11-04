@@ -493,7 +493,7 @@ links:
       value: 0.00853198276973456
     inertia:
       ixx: 2.89328108496468e-6
-      ixy: -1.5793504723739701e-19
+      ixy: -1.57935047237397e-19
       ixz: -1.93980378593255e-19
       iyy: 1.86719750325683e-6
       iyz: -1.21858577871576e-6
@@ -726,7 +726,7 @@ links:
     inertia:
       ixx: 0.0000261910379223783
       ixy: -2.43616858946494e-7
-      ixz: -6.377899061171231e-9
+      ixz: -6.37789906117123e-9
       iyy: 2.8270243746167e-6
       iyz: -5.37200748039765e-7
       izz: 0.0000283695868220296
@@ -782,7 +782,7 @@ links:
       value: 0.00853198276973456
     inertia:
       ixx: 2.89328108496468e-6
-      ixy: -1.5793504723739701e-19
+      ixy: -1.57935047237397e-19
       ixz: -1.93980378593255e-19
       iyy: 1.86719750325683e-6
       iyz: -1.21858577871576e-6
@@ -1015,7 +1015,7 @@ links:
     inertia:
       ixx: 0.0000261910379223783
       ixy: -2.43616858946494e-7
-      ixz: -6.377899061171231e-9
+      ixz: -6.37789906117123e-9
       iyy: 2.8270243746167e-6
       iyz: -5.37200748039765e-7
       izz: 0.0000283695868220296
@@ -1404,7 +1404,7 @@ joints:
     velocity: 2.0
   dynamics: null
   mimic:
-    joint: finger_joint
+    joint: robot_1_finger_joint
     multiplier: -1.0
     offset: 0.0
   safety_controller: null
@@ -1435,7 +1435,7 @@ joints:
     velocity: 2.0
   dynamics: null
   mimic:
-    joint: finger_joint
+    joint: robot_1_finger_joint
     multiplier: 1.0
     offset: 0.0
   safety_controller: null
@@ -1494,7 +1494,7 @@ joints:
     velocity: 2.0
   dynamics: null
   mimic:
-    joint: finger_joint
+    joint: robot_1_finger_joint
     multiplier: -1.0
     offset: 0.0
   safety_controller: null
@@ -1553,7 +1553,7 @@ joints:
     velocity: 2.0
   dynamics: null
   mimic:
-    joint: finger_joint
+    joint: robot_1_finger_joint
     multiplier: -1.0
     offset: 0.0
   safety_controller: null
@@ -1584,7 +1584,7 @@ joints:
     velocity: 2.0
   dynamics: null
   mimic:
-    joint: finger_joint
+    joint: robot_1_finger_joint
     multiplier: 1.0
     offset: 0.0
   safety_controller: null

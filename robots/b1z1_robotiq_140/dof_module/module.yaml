@@ -1,4 +1,4 @@
-num_dofs: 24
+num_dofs: 19
 dof_idx_to_joint_idx_mapping:
 - 3
 - 5
@@ -19,11 +19,6 @@ dof_idx_to_joint_idx_mapping:
 - 38
 - 39
 - 41
-- 43
-- 44
-- 46
-- 48
-- 49
 joint_idx_to_dof_idxs_mapping:
 - []
 - []
@@ -68,11 +63,11 @@ joint_idx_to_dof_idxs_mapping:
 - []
 - - 18
 - []
-- - 19
-- - 20
 - []
-- - 21
 - []
-- - 22
-- - 23
+- []
+- []
+- []
+- []
+- []
 - []

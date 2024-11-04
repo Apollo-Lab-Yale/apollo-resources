@@ -2399,7 +2399,7 @@ links:
     inertia:
       ixx: 0.0000261910379223783
       ixy: -2.43616858946494e-7
-      ixz: -6.3778990611712315e-9
+      ixz: -6.377899061171231e-9
       iyy: 2.8270243746167e-6
       iyz: -5.37200748039765e-7
       izz: 0.0000283695868220296
@@ -2688,7 +2688,7 @@ links:
     inertia:
       ixx: 0.0000261910379223783
       ixy: -2.43616858946494e-7
-      ixz: -6.3778990611712315e-9
+      ixz: -6.377899061171231e-9
       iyy: 2.8270243746167e-6
       iyz: -5.37200748039765e-7
       izz: 0.0000283695868220296
@@ -3997,7 +3997,7 @@ joints:
     velocity: 2.0
   dynamics: null
   mimic:
-    joint: finger_joint
+    joint: robot_1_robot_1_finger_joint
     multiplier: -1.0
     offset: 0.0
   safety_controller: null
@@ -4028,7 +4028,7 @@ joints:
     velocity: 2.0
   dynamics: null
   mimic:
-    joint: finger_joint
+    joint: robot_1_robot_1_finger_joint
     multiplier: 1.0
     offset: 0.0
   safety_controller: null
@@ -4087,7 +4087,7 @@ joints:
     velocity: 2.0
   dynamics: null
   mimic:
-    joint: finger_joint
+    joint: robot_1_robot_1_finger_joint
     multiplier: -1.0
     offset: 0.0
   safety_controller: null
@@ -4146,7 +4146,7 @@ joints:
     velocity: 2.0
   dynamics: null
   mimic:
-    joint: finger_joint
+    joint: robot_1_robot_1_finger_joint
     multiplier: -1.0
     offset: 0.0
   safety_controller: null
@@ -4177,7 +4177,7 @@ joints:
     velocity: 2.0
   dynamics: null
   mimic:
-    joint: finger_joint
+    joint: robot_1_robot_1_finger_joint
     multiplier: 1.0
     offset: 0.0
   safety_controller: null
